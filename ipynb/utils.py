@@ -8,122 +8,43 @@ def rms(d):
     return np.sqrt(np.mean(d**2))
 
 
-def get_snr(d, t, dist, vmin, vmax, extend=0, offset=20, axis=1,
-            getwindow=False, db=False, side="a", shorten_noise=False):
+def get_snr(trace, pick, pre_wl=1e-3, post_wl=10e-3):
     """
-    Get SNRs of the data with given distance, vmin, and vmax. The
-    signal window will be computed using vmin and vmax. The noise
-    window will be the same length as the signal window shifted
-    toward the end with the given offset.
+    PARAMETERS:
+    tr - Obspy trace
+    Pick Time - in Obspy UTCDateTime
+    preWl - Length of pre-window in seconds
+    postWl - Length of post-window in seconds
 
-    d,t,dist,vmin,vmax: REQUIRED. data, time vector, distance, minimum
-                        velocity, maximum velocity.
-    extend: extend the window length from the computed window based on
-            vmin and vmax. default is 20.
-    offset: offset between noise and signal windows, in seconds. default is 20.
-    axis: axis for the calculation. default 1.
-    db: Decibel or not. Default is False.
-    getwindow: return the indices of the signal and noise windows. only
-                the start and end indices. Default False.
-    side: negative (n) and/or positive (p) or both sides (a) for the
-          given data (time vector). Default: "a"
-    shorten_noise: force noise window to fit the data length after the signal
-                   window. Default False.
-            If True, the noise window will be smaller than the signal window.
-
-    RETURNS
-    snr: [negative, positive]
-    [sig_idx_p,noise_idx_p],[sig_idx_n,noise_idx_n]: only return these windows
-    when getwindow is True and side=="a".
-    When side != "a" only returns the corresponding window indices.
+    RETURNS:
+    SNR - Signal to noise ratio
     """
-    d = np.array(d)
-    # get window index:
-    tmin = dist/vmax
-    tmax = extend + dist/vmin
-    dt = np.abs(t[1]-t[0])
-    shift = int(offset/dt)
-    if side.lower() == "a":
-        halfn = int(len(t)/2) + 1
-    else:
-        halfn = 0
-    sig_idx_p = [int(tmin/dt) + halfn, int(tmax/dt)+halfn]
-    winlen = sig_idx_p[1] - sig_idx_p[0] + 1
-    noise_idx_p = [sig_idx_p[0] + shift + winlen,
-                   sig_idx_p[1] + shift + winlen]
-    if noise_idx_p[1] > len(t) - 1:
-        if shorten_noise:
-            print("Noise window end [%d]is larger than the data length \
-                  [%d]. Force it to stop at the end."
-                  % (noise_idx_p[1], len(t)-1))
-            noise_idx_p[1] = len(t) - 1
-        else:
-            raise ValueError("Noise window end [%d]is larger than the data \
-                             length [%d]. Please adjust it."
-                             % (noise_idx_p[1], len(t)-1))
 
-    sig_idx_n = [len(t) - sig_idx_p[1], len(t) - sig_idx_p[0]]
-    noise_idx_n = [len(t) - noise_idx_p[1], len(t) - noise_idx_p[0]]
+    tr = trace
 
-    if d.ndim == 1:
-        # axis is not used in this case
-        if side.lower() == "a":
-            snr_n = rms(np.abs(d[sig_idx_n[0]:sig_idx_n[1]+1])) / \
-                rms(np.abs(d[noise_idx_n[0]:noise_idx_n[1]+1]))
-            snr_p = rms(np.abs(d[sig_idx_p[0]:sig_idx_p[1]+1])) / \
-                rms(np.abs(d[noise_idx_p[0]:noise_idx_p[1]+1]))
-            snr = [snr_n**2, snr_p**2]
-        elif side.lower() == "n":
-            snr_n = rms(np.abs(d[sig_idx_n[0]:sig_idx_n[1]+1])) / \
-                rms(np.abs(d[noise_idx_n[0]:noise_idx_n[1]+1]))
-            snr = snr_n**2
-        elif side.lower() == "p":
-            snr_p = rms(np.abs(d[sig_idx_p[0]:sig_idx_p[1]+1])) / \
-                rms(np.abs(d[noise_idx_p[0]:noise_idx_p[1]+1]))
-            snr = snr_p**2
-        else:
-            raise ValueError(side+" is not supported. use one of: xcorr_sides")
-    elif d.ndim == 2:
-        if axis == 1:
-            dim = 0
-        else:
-            dim = 1
-        if side.lower() == "a":
-            snr = np.ndarray((d.shape[dim], 2))
-            for i in range(d.shape[dim]):
-                snr_n = rms(np.abs(d[i, sig_idx_n[0]:sig_idx_n[1]+1])) / \
-                    rms(np.abs(d[i, noise_idx_n[0]:noise_idx_n[1]+1]))
-                snr_p = rms(np.abs(d[i, sig_idx_p[0]:sig_idx_p[1]+1])) / \
-                    rms(np.abs(d[i, noise_idx_p[0]:noise_idx_p[1]+1]))
-                snr[i, :] = [snr_n**2, snr_p**2]
-        elif side.lower() == "n":
-            snr = np.ndarray((d.shape[dim], 1))
-            for i in range(d.shape[dim]):
-                snr_n = rms(np.abs(d[i, sig_idx_n[0]:sig_idx_n[1]+1])) / \
-                        rms(np.abs(d[i, noise_idx_n[0]:noise_idx_n[1]+1]))
-                snr[i] = snr_n**2
-        elif side.lower() == "p":
-            snr = np.ndarray((d.shape[dim], 1))
-            for i in range(d.shape[dim]):
-                snr_p = rms(np.abs(d[i, sig_idx_p[0]:sig_idx_p[1]+1])) / \
-                        rms(np.abs(d[i, noise_idx_p[0]:noise_idx_p[1]+1]))
-                snr[i] = snr_p**2
-        else:
-            raise ValueError(side+" is not supported. use one of: xcorr_sides")
+    sr = tr.stats.sampling_rate
+    st = tr.stats.starttime
+    et = tr.stats.endtime
+    ps = int((pick - st) * sr)
+    n_pre = int(pre_wl * sr)
+    n_post = int(post_wl * sr)
+
+    if pick + post_wl > et:
+        energy_s = np.var(tr.data[ps:])
     else:
-        raise ValueError("Only handles ndim <=2.")
-        snr = None
-    if db:
-        snr = 10*np.log10(snr)
-    if getwindow:
-        if side.lower() == "a":
-            return snr, [sig_idx_p, noise_idx_p], [sig_idx_n, noise_idx_n]
-        elif side.lower() == "n":
-            return snr, [sig_idx_n, noise_idx_n]
-        elif side.lower() == "p":
-            return snr, [sig_idx_p, noise_idx_p]
+        energy_s = np.var(tr.data[ps:ps + n_post])
+
+    if pick - pre_wl < st:
+        energy_n = np.var(tr.data[:ps])
     else:
-        return snr
+        energy_n = np.var(tr.data[ps - n_pre:ps])
+
+    if (energy_n == 0) | (energy_s == 0):
+        return 0
+
+    snr = 10 * np.log10(energy_s / energy_n)
+
+    return snr
 
 
 def get_tt(event_lat, event_long, sta_lat, sta_long, depth_km,
