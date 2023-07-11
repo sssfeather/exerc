@@ -1,6 +1,9 @@
 import math
 import numpy as np
+from scipy import signal, fftpack
 from obspy.core.inventory.inventory import Inventory
+from obspy.geodetics.base import locations2degrees
+from obspy.taup import TauPyModel
 
 
 def trace_psd(tr, metadata,
@@ -88,9 +91,9 @@ def trace_psd(tr, metadata,
         period_limits = (_psd_periods[0], _psd_periods[-1])
         # calculate smoothed periods
         for periods_bins in \
-                _setup_yield_period_binning(psd_periods,
-                                            period_smoothing_width_octaves,
-                                            period_step_octaves, period_limits):
+            _setup_yield_period_binning(psd_periods,
+                                        period_smoothing_width_octaves,
+                                        period_step_octaves, period_limits):
             period_bin_left, period_bin_center, period_bin_right = periods_bins
             _spec_slice = spec[(period_bin_left <= _psd_periods) &
                                (_psd_periods <= period_bin_right)]
@@ -144,11 +147,6 @@ def psd(x, nfft=None, fs=None, detrend=None, window=None,
 def _spectral_helper(x, y=None, NFFT=None, Fs=None, detrend_func=None,  # noqa
                      window=None, noverlap=None, pad_to=None,  # noqa
                      sides=None, scale_by_freq=None, mode=None):
-    """
-    Private helper implementing the common parts between the psd, csd
-    (cross spectral density), spectrogram and complex, magnitude, angle, and
-    phase spectra.
-    """
     if y is None:
         same_data = True
     else:
@@ -284,10 +282,6 @@ def _spectral_helper(x, y=None, NFFT=None, Fs=None, detrend_func=None,  # noqa
 
 
 def stride_windows(x, n, noverlap=None, axis=0):
-    """
-    Get all windows of x with length n as a single array,
-    using strides to avoid data duplication.
-    """
     if noverlap is None:
         noverlap = 0
 
@@ -327,9 +321,6 @@ def stride_windows(x, n, noverlap=None, axis=0):
 
 
 def detrend(x, key=None, axis=None):
-    """
-    Return x with its trend removed.
-    """
     if key is None or key in ['constant', 'mean', 'default']:
         return detrend(x, key=detrend_mean, axis=axis)
     elif key == 'linear':
@@ -354,9 +345,6 @@ def detrend(x, key=None, axis=None):
 
 
 def detrend_mean(x, axis=None):
-    """
-    Return x minus the mean(x).
-    """
     x = np.asarray(x)
 
     if axis is not None and axis+1 > x.ndim:
@@ -366,16 +354,10 @@ def detrend_mean(x, axis=None):
 
 
 def detrend_none(x, axis=None):
-    """
-    Return x: no detrending.
-    """
     return x
 
 
 def detrend_linear(y):
-    """
-    Return x minus best fit line; 'linear' detrending.
-    """
     # This is faster than an algorithm based on linalg.lstsq.
     y = np.asarray(y)
 
@@ -401,17 +383,11 @@ def detrend_linear(y):
 
 
 def fft_taper(data):
-    """Cosine taper, 10 percent at each end
-    """
     return data * cosine_taper(len(data), 0.2)
 
 
 def cosine_taper(npts, p=0.1, freqs=None, flimit=None, halfcosine=True,
                  sactaper=False):
-    """
-    Cosine Taper. Copied from ObsPy to avoid importing unnecessary stuff from
-    the invsim module (import in ObsPy can be quite slow)
-    """
     if p < 0 or p > 1:
         msg = "Decimal taper percentage must be between 0 and 1."
         raise ValueError(msg)
@@ -466,9 +442,6 @@ def cosine_taper(npts, p=0.1, freqs=None, flimit=None, halfcosine=True,
 
 
 def window_hanning(x):
-    """
-    Return x times the hanning window of len(x).
-    """
     return np.hanning(len(x))*x
 
 ##########################
@@ -477,8 +450,6 @@ def window_hanning(x):
 
 
 def _get_response(tr, metadata, nfft):
-    """Return the response from the given trace and the given metadata
-    """
     if isinstance(metadata, Inventory):
         return _get_response_from_inventory(tr, metadata, nfft)
 
@@ -487,9 +458,6 @@ def _get_response(tr, metadata, nfft):
 
 
 def _get_response_from_inventory(tr, metadata, nfft):
-    """Alias of
-    :meth:`~obspy.signal.spectral_estimation.PPSD._get_response_from_inventory`
-    """
     inventory = metadata
     delta = 1.0 / tr.stats.sampling_rate
     id_ = "%(network)s.%(station)s.%(location)s.%(channel)s" % tr.stats
@@ -502,9 +470,6 @@ def _get_response_from_inventory(tr, metadata, nfft):
 
 def get_evalresp_response(response, t_samp, nfft, output="VEL",
                           start_stage=None, end_stage=None):
-    """Alias of
-    :meth:`~obspy.core.inventory.response.Response.get_evalresp_response`
-    """
     fy = 1 / (t_samp * 2.0)
     freqs = np.linspace(0, fy, nfft // 2 + 1).astype(np.float64)
 
@@ -517,9 +482,6 @@ def get_evalresp_response(response, t_samp, nfft, output="VEL",
 
 def get_evalresp_response_for_frequencies(response, frequencies, output="VEL",
                                           start_stage=None, end_stage=None):
-    """Alias of
-    :meth:`~obspy.core.inventory.response.Response.get_evalresp_response_for_frequencies`
-    """
     output, chan = response._call_eval_resp_for_frequencies(
         frequencies, output=output, start_stage=start_stage,
         end_stage=end_stage, hide_sensitivity_mismatch_warning=True)
@@ -546,9 +508,6 @@ def _yield_period_binning(psd_periods, period_smoothing_width_octaves):
 
 def _setup_yield_period_binning(psd_periods, period_smoothing_width_octaves,
                                 period_step_octaves, period_limits):
-    """
-    Set up period binning
-    """
     if period_limits is None:
         period_limits = (psd_periods[0], psd_periods[-1])
     period_step_factor = 2 ** period_step_octaves
@@ -579,3 +538,194 @@ def _setup_yield_period_binning(psd_periods, period_smoothing_width_octaves,
             idx += 1
 
         previous_periods = per_left, per_center, per_right
+
+
+###################
+#  design filter  #
+###################
+
+def design_filter(sample_rate, data_length, corners, order=4,
+                  window_type='butter', filter_type='bandpass',
+                  ripple=None, attenuation=None):
+    """
+    Design a frequency-domain filter.
+
+    :type sample_rate: float
+    :param sample_rate: Sampling-rate in Hz
+    :type data_length: int
+    :param data_length:
+        Length of data to apply to - will use the next-fast
+        fft length from this.
+    :type corners: array-like
+    :param corners: list of corners for filter in order, in Hz
+    :type order: int
+    :param order: Filter order
+    :type window_type: str
+    :param window_type:
+        Type of window to use, must be one of:
+        'butter' : Butterworth
+        'cheby1': Chebyshev I
+        'cheby2': Chenyshev II
+        'ellip': Cauer/elliptic
+        'bessel': Bessel/Thomson
+    :type filter_type: str
+    :param filter_type:
+        Type of band to use, must be one of:
+        'bandpass', 'lowpass', 'highpass', 'bandstop'
+    """
+    nyquist = .5 * sample_rate
+    # Check that highpass is usefully less than the nyquist
+    if max(corners) > (nyquist * .98):
+        raise NotImplementedError(
+            "Highcut {0} is higher than Nyquist {1}.".format(
+                max(corners), nyquist))
+    fft_len = fftpack.next_fast_len(data_length)
+    b, a = signal.iirfilter(N=order, Wn=corners, btype=filter_type,
+                            analog=False, ftype=window_type,
+                            output='ba', rp=ripple, rs=attenuation,
+                            fs=sample_rate)
+    _, filt = signal.freqz(b, a, worN=fft_len, fs=sample_rate)
+    return filt
+
+
+def get_tt(event_lat, event_long, sta_lat, sta_long, depth_km,
+           model="iasp91", type='first'):
+    """
+    Get the seismic phase arrival time of the specified earthquake
+    at the station.
+    """
+    sta_t = locations2degrees(event_lat, event_long, sta_lat, sta_long)
+    taup = TauPyModel(model=model)
+    arrivals = taup.get_travel_times(source_depth_in_km=depth_km,
+                                     distance_in_degree=sta_t)
+    if type == 'first':
+        tt = arrivals[0].time
+        ph = arrivals[0].phase
+    else:
+        phase_found = False
+        phaseall = []
+        for i in range(len(arrivals)):
+            phaseall.append(arrivals[i].phase.name)
+            if arrivals[i].phase.name == type:
+                tt = arrivals[i].time
+                ph = type
+                phase_found = True
+                break
+        if not phase_found:
+            raise ValueError('phase <'+type+' > not found in '+str(phaseall))
+
+    return tt, ph
+
+###################
+#  comput corr    #
+###################
+
+
+def xcorr(x, y, maxlags=10):
+    Nx = len(x)
+    if Nx != len(y):
+        raise ValueError('x and y must be equal length')
+
+    c = np.correlate(x, y, mode=2)
+
+    if maxlags is None:
+        maxlags = Nx - 1
+
+    if maxlags >= Nx or maxlags < 1:
+        raise ValueError('maxlags must be None or strictly positive < %d' % Nx)
+
+    c = c[Nx - 1 - maxlags:Nx + maxlags]
+
+    return c
+
+#####################
+#  Data Processing  #
+#####################
+
+
+def remove_empty_trace(stream, date_info):
+    # remove empty/big traces
+    if len(stream) == 0 or len(stream) > 100:
+        stream = []
+        return stream
+
+    # remove traces with big gaps
+    if portion_gaps(stream, date_info) > 0.3:
+        stream = []
+        return stream
+
+    freqs = []
+    for tr in stream:
+        freqs.append(int(tr.stats.sampling_rate))
+    freq = max(freqs)
+    for tr in stream:
+        if int(tr.stats.sampling_rate) != freq:
+            stream.remove(tr)
+        if tr.stats.npts < 10:
+            stream.remove(tr)
+
+    return stream
+
+
+def portion_gaps(stream, date_info):
+    starttime = date_info['starttime']
+    endtime = date_info['endtime']
+    npts = (endtime-starttime)*stream[0].stats.sampling_rate
+
+    pgaps = 0
+    # loop through all trace to accumulate gaps
+    for ii in range(len(stream)-1):
+        pgaps += (stream[ii+1].stats.starttime-stream[ii].stats.endtime) * \
+                            stream[ii].stats.sampling_rate
+    if npts != 0:
+        pgaps = pgaps/npts
+    if npts == 0:
+        pgaps = 1
+    return pgaps
+
+
+def rms(d):
+    return np.sqrt(np.mean(d**2))
+
+############################
+#  Signal to noise ratio   #
+############################
+
+
+def get_snr(trace, pick, pre_wl=10, post_wl=10):
+    """
+    PARAMETERS:
+    tr - Obspy trace
+    Pick Time - in Obspy UTCDateTime
+    preWl - Length of pre-window in seconds
+    postWl - Length of post-window in seconds
+
+    RETURNS:
+    SNR - Signal to noise ratio
+    """
+
+    tr = trace
+
+    sr = tr.stats.sampling_rate
+    st = tr.stats.starttime
+    et = tr.stats.endtime
+    ps = int((pick - st) * sr)
+    n_pre = int(pre_wl * sr)
+    n_post = int(post_wl * sr)
+
+    if pick + post_wl > et:
+        energy_s = np.var(tr.data[ps:])
+    else:
+        energy_s = np.var(tr.data[ps:ps + n_post])
+
+    if pick - pre_wl < st:
+        energy_n = np.var(tr.data[:ps])
+    else:
+        energy_n = np.var(tr.data[ps - n_pre:ps])
+
+    if (energy_n == 0) | (energy_s == 0):
+        return 0
+
+    snr = 10 * np.log10(energy_s / energy_n)
+
+    return snr
