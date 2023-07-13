@@ -1,0 +1,1460 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.2">
+  <Source>GeoNet</Source>
+  <Sender>WEL(GNS_Test)</Sender>
+  <Module>Delta</Module>
+  <ModuleURI/>
+  <Created>2023-07-12T01:33:01.000000Z</Created>
+  <Network code="NZ" startDate="1884-02-01T00:00:00.000000Z" restrictedStatus="open">
+    <Description>New Zealand National Seismograph Network</Description>
+    <TotalNumberStations>2144</TotalNumberStations>
+    <SelectedNumberStations>15</SelectedNumberStations>
+    <Station code="ARCZ" startDate="2014-05-13T00:00:00.000000Z" restrictedStatus="open">
+      <Description>South Island regional seismic network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.94705</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">171.17674</Longitude>
+      <Elevation>462.0</Elevation>
+      <Site>
+        <Name>Arundel</Name>
+        <Description>8 km south-west of Peel Forest</Description>
+      </Site>
+      <CreationDate>2014-05-13T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>6</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="EHZ" startDate="2014-05-13T00:05:00.000000Z" endDate="2022-02-23T10:25:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from external GPS measurement</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.94705</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">171.17674</Longitude>
+        <Elevation>462.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#LE-3DliteMkII:N-1297">
+          <Type>Short Period Seismometer</Type>
+          <Description>Lennartz Electronic LE-3DliteMkII Short Period Seismometer</Description>
+          <Manufacturer>Lennartz Electronic</Manufacturer>
+          <Model>LE-3DliteMkII</Model>
+          <SerialNumber>N-1297</SerialNumber>
+          <InstallationDate>2014-05-13T00:05:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/3:5069">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/3</Model>
+          <SerialNumber>5069</SerialNumber>
+          <InstallationDate>2014-05-13T00:00:01.000000Z</InstallationDate>
+          <RemovalDate>2022-02-23T10:25:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>167772160.00000003</Value>
+            <Frequency>15.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="EAZ" startDate="2004-11-01T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-45.231053397</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">169.308253387</Longitude>
+      <Elevation>350.0</Elevation>
+      <Site>
+        <Name>Earnscleugh</Name>
+        <Description>6 km west of Alexandra</Description>
+      </Site>
+      <CreationDate>2004-11-01T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>39</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="HHZ" startDate="2014-11-04T00:02:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-45.231053397</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.308253387</Longitude>
+        <Elevation>350.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESPC:T38574">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESPC Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESPC</Model>
+          <SerialNumber>T38574</SerialNumber>
+          <InstallationDate>2014-11-04T00:02:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:5442">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>5442</SerialNumber>
+          <InstallationDate>2014-11-04T00:00:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="FOZ" startDate="2004-10-13T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.532099313</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">169.815479827</Longitude>
+      <Elevation>54.0</Elevation>
+      <Site>
+        <Name>Fox Glacier</Name>
+        <Description>32 km north-west of Mount Cook</Description>
+      </Site>
+      <CreationDate>2004-10-13T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>51</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="HHZ" startDate="2018-12-11T21:45:00.000000Z" restrictedStatus="open" locationCode="11">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.53171</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.81575</Longitude>
+        <Elevation>58.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G67">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G67</SerialNumber>
+          <InstallationDate>2015-09-23T05:30:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6861">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6861</SerialNumber>
+          <InstallationDate>2018-12-11T21:45:00.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GCSZ" startDate="2012-04-16T00:00:00.000000Z" endDate="2022-02-02T09:20:00.000000Z" restrictedStatus="open">
+      <Description>South Island regional seismic network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.31601</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">170.32673</Longitude>
+      <Elevation>210.0</Elevation>
+      <Site>
+        <Name>Gaunt Creek Borehole</Name>
+        <Description>6 km south-west of Whataroa</Description>
+      </Site>
+      <CreationDate>2012-04-16T00:00:00.000000Z</CreationDate>
+      <TerminationDate>2022-02-02T09:20:00.000000Z</TerminationDate>
+      <TotalNumberChannels>12</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="EHZ" startDate="2018-10-15T00:10:00.000000Z" endDate="2022-02-02T09:20:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.31601</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.32673</Longitude>
+        <Elevation>210.0</Elevation>
+        <Depth>81.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#2 Hz Duke Malin Seismometer:GC2">
+          <Type>Short Period Borehole Seismometer</Type>
+          <Description>Duke University 2 Short Period Borehole Seismometer</Description>
+          <Manufacturer>Duke University</Manufacturer>
+          <Model>2 Hz Duke Malin Seismometer</Model>
+          <SerialNumber>GC2</SerialNumber>
+          <InstallationDate>2013-02-03T00:10:00.000000Z</InstallationDate>
+          <RemovalDate>2022-02-02T09:20:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6144">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6144</SerialNumber>
+          <InstallationDate>2018-10-15T00:10:00.000000Z</InstallationDate>
+          <RemovalDate>2022-02-02T09:20:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>834834268.1600001</Value>
+            <Frequency>15.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="HDWS" startDate="2002-01-01T00:00:00.000000Z" restrictedStatus="open">
+      <Description>National strong motion network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.883006138</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">169.044147881</Longitude>
+      <Elevation>20.0</Elevation>
+      <Site>
+        <Name>Haast DOC Workshop</Name>
+        <Description>within 5 km of Haast</Description>
+      </Site>
+      <CreationDate>2002-01-01T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>12</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="BN2" startDate="2018-03-08T14:25:00.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.883006138</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.044147881</Longitude>
+        <Elevation>20.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">343.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-OBSIDIAN:591">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-OBSIDIAN Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-OBSIDIAN</Model>
+          <SerialNumber>591</SerialNumber>
+          <InstallationDate>2018-03-08T14:25:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#OBSIDIAN:591">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics OBSIDIAN Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>OBSIDIAN</Model>
+          <SerialNumber>591</SerialNumber>
+          <InstallationDate>2018-03-08T14:25:00.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="BNZ" startDate="2018-03-08T14:25:00.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.883006138</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.044147881</Longitude>
+        <Elevation>20.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-OBSIDIAN:591">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-OBSIDIAN Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-OBSIDIAN</Model>
+          <SerialNumber>591</SerialNumber>
+          <InstallationDate>2018-03-08T14:25:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#OBSIDIAN:591">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics OBSIDIAN Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>OBSIDIAN</Model>
+          <SerialNumber>591</SerialNumber>
+          <InstallationDate>2018-03-08T14:25:00.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="JCZ" startDate="2004-06-23T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.07321036</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">168.785473425</Longitude>
+      <Elevation>1062.0</Elevation>
+      <Site>
+        <Name>Jackson Bay</Name>
+        <Description>30 km south-west of Haast</Description>
+      </Site>
+      <CreationDate>2004-06-23T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>51</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="HHE" startDate="2017-03-15T03:15:01.000000Z" endDate="2021-12-15T20:47:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.07321036</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">168.785473425</Longitude>
+        <Elevation>1062.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">90.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G78">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G78</SerialNumber>
+          <InstallationDate>2004-10-15T01:00:00.000000Z</InstallationDate>
+          <RemovalDate>2021-12-15T20:47:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6063">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6063</SerialNumber>
+          <InstallationDate>2017-03-15T03:15:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="HHZ" startDate="2017-03-15T03:15:01.000000Z" endDate="2021-12-15T20:47:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.07321036</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">168.785473425</Longitude>
+        <Elevation>1062.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G78">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G78</SerialNumber>
+          <InstallationDate>2004-10-15T01:00:00.000000Z</InstallationDate>
+          <RemovalDate>2021-12-15T20:47:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6063">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6063</SerialNumber>
+          <InstallationDate>2017-03-15T03:15:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="LBZ" startDate="2004-06-04T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.385552844</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">170.184419859</Longitude>
+      <Elevation>438.0</Elevation>
+      <Site>
+        <Name>Lake Benmore</Name>
+        <Description>15 km south-east of Twizel</Description>
+      </Site>
+      <CreationDate>2004-06-04T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>39</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="HHE" startDate="2014-10-02T00:05:01.000000Z" endDate="2021-12-07T22:31:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.385552844</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.184419859</Longitude>
+        <Elevation>438.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">90.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G61">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G61</SerialNumber>
+          <InstallationDate>2004-06-04T06:20:00.000000Z</InstallationDate>
+          <RemovalDate>2021-12-07T22:31:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/3:5161">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/3</Model>
+          <SerialNumber>5161</SerialNumber>
+          <InstallationDate>2014-10-02T00:05:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="HHZ" startDate="2014-10-02T00:05:01.000000Z" endDate="2021-12-07T22:31:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.385552844</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.184419859</Longitude>
+        <Elevation>438.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G61">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G61</SerialNumber>
+          <InstallationDate>2004-06-04T06:20:00.000000Z</InstallationDate>
+          <RemovalDate>2021-12-07T22:31:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/3:5161">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/3</Model>
+          <SerialNumber>5161</SerialNumber>
+          <InstallationDate>2014-10-02T00:05:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="MCNS" startDate="2008-05-10T00:00:00.000000Z" restrictedStatus="open">
+      <Description>National strong motion network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.73645</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">170.0972</Longitude>
+      <Elevation>740.0</Elevation>
+      <Site>
+        <Name>Mount Cook Annex</Name>
+        <Description>within 5 km of Mount Cook</Description>
+      </Site>
+      <CreationDate>2008-05-10T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>18</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="BNZ" startDate="2016-09-08T01:17:00.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.73645</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.0972</Longitude>
+        <Elevation>740.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:2029">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>2029</SerialNumber>
+          <InstallationDate>2016-09-08T01:17:00.000000Z</InstallationDate>
+          <RemovalDate>2021-05-18T05:11:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:2029">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>2029</SerialNumber>
+          <InstallationDate>2016-09-08T01:17:00.000000Z</InstallationDate>
+          <RemovalDate>2021-05-18T05:11:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="MECS" startDate="2002-08-07T00:00:00.000000Z" restrictedStatus="open">
+      <Description>National strong motion network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.230445889</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">169.232938317</Longitude>
+      <Elevation>336.0</Elevation>
+      <Site>
+        <Name>Makarora Emergency Centre</Name>
+        <Description>41 km south of Haast</Description>
+      </Site>
+      <CreationDate>2002-08-07T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>21</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="BN1" startDate="2015-08-11T00:30:00.000000Z" endDate="2019-10-23T23:48:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.230445889</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.232938317</Longitude>
+        <Elevation>336.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">203.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:615">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>615</SerialNumber>
+          <InstallationDate>2015-08-11T00:30:00.000000Z</InstallationDate>
+          <RemovalDate>2019-10-23T23:48:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:615">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>615</SerialNumber>
+          <InstallationDate>2015-08-11T00:30:00.000000Z</InstallationDate>
+          <RemovalDate>2019-10-23T23:48:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="BN2" startDate="2015-08-11T00:30:00.000000Z" endDate="2019-10-23T23:48:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.230445889</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.232938317</Longitude>
+        <Elevation>336.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">293.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:615">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>615</SerialNumber>
+          <InstallationDate>2015-08-11T00:30:00.000000Z</InstallationDate>
+          <RemovalDate>2019-10-23T23:48:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:615">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>615</SerialNumber>
+          <InstallationDate>2015-08-11T00:30:00.000000Z</InstallationDate>
+          <RemovalDate>2019-10-23T23:48:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="MLZ" startDate="1996-03-09T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-45.366543525</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">168.118406813</Longitude>
+      <Elevation>594.0</Elevation>
+      <Site>
+        <Name>Mavora Lakes</Name>
+        <Description>32 km east of Te Anau</Description>
+      </Site>
+      <CreationDate>1996-03-09T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>49</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="HHZ" startDate="2014-03-25T00:00:01.000000Z" endDate="2021-06-08T00:40:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-45.366543525</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">168.118406813</Longitude>
+        <Elevation>594.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3B46">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3B46</SerialNumber>
+          <InstallationDate>2003-09-08T00:00:00.000000Z</InstallationDate>
+          <RemovalDate>2021-06-08T00:40:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330/3:2466">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330 Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330/3</Model>
+          <SerialNumber>2466</SerialNumber>
+          <InstallationDate>2014-03-25T00:00:01.000000Z</InstallationDate>
+          <RemovalDate>2022-07-04T17:22:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="MSZ" startDate="1966-03-03T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.673333781</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">167.92639864</Longitude>
+      <Elevation>55.0</Elevation>
+      <Site>
+        <Name>Milford Sound</Name>
+        <Description>within 5 km of Milford Sound</Description>
+      </Site>
+      <CreationDate>1966-03-03T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>43</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="HHE" startDate="2017-05-23T04:15:01.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.673333781</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">167.92639864</Longitude>
+        <Elevation>55.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">90.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3E65">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3E65</SerialNumber>
+          <InstallationDate>2005-07-19T20:00:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6054">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6054</SerialNumber>
+          <InstallationDate>2017-05-23T04:15:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="HHZ" startDate="2017-05-23T04:15:01.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.673333781</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">167.92639864</Longitude>
+        <Elevation>55.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3E65">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3E65</SerialNumber>
+          <InstallationDate>2005-07-19T20:00:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6054">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6054</SerialNumber>
+          <InstallationDate>2017-05-23T04:15:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="NSBS" startDate="2004-06-23T00:00:00.000000Z" restrictedStatus="open">
+      <Description>National strong motion network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-43.996197946</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">168.660945266</Longitude>
+      <Elevation>8.0</Elevation>
+      <Site>
+        <Name>Neils Beach</Name>
+        <Description>34 km west of Haast</Description>
+      </Site>
+      <CreationDate>2004-06-23T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>12</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="BN2" startDate="2014-07-15T03:35:00.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="21">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.99786</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">168.660873</Longitude>
+        <Elevation>8.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">103.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:2143">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>2143</SerialNumber>
+          <InstallationDate>2014-07-15T03:35:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:2143">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>2143</SerialNumber>
+          <InstallationDate>2014-07-15T03:35:00.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="BNZ" startDate="2014-07-15T03:35:00.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="21">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-43.99786</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">168.660873</Longitude>
+        <Elevation>8.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:2143">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>2143</SerialNumber>
+          <InstallationDate>2014-07-15T03:35:00.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:2143">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>2143</SerialNumber>
+          <InstallationDate>2014-07-15T03:35:00.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="ODZ" startDate="1990-08-31T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-45.043982113</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">170.644622213</Longitude>
+      <Elevation>274.0</Elevation>
+      <Site>
+        <Name>Otahua Downs</Name>
+        <Description>26 km west of Oamaru</Description>
+      </Site>
+      <CreationDate>1990-08-31T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>54</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="HHZ" startDate="2008-07-08T00:00:03.000000Z" endDate="2021-10-20T20:10:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-45.043982113</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.644622213</Longitude>
+        <Elevation>274.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#STS-2:110038">
+          <Type>Broadband Seismometer</Type>
+          <Description>Streckeisen STS-2 Broadband Seismometer</Description>
+          <Manufacturer>Streckeisen</Manufacturer>
+          <Model>STS-2</Model>
+          <SerialNumber>110038</SerialNumber>
+          <InstallationDate>2006-10-13T04:20:01.000000Z</InstallationDate>
+          <RemovalDate>2021-10-20T20:10:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330HR/6:2131">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330HR Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330HR/6</Model>
+          <SerialNumber>2131</SerialNumber>
+          <InstallationDate>2008-07-08T00:00:03.000000Z</InstallationDate>
+          <RemovalDate>2021-10-20T20:10:00.000000Z</RemovalDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>2516582400.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="TWAS" startDate="2002-07-04T00:00:00.000000Z" restrictedStatus="open">
+      <Description>National strong motion network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.254589089</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">170.098339469</Longitude>
+      <Elevation>476.0</Elevation>
+      <Site>
+        <Name>Twizel Area School</Name>
+        <Description>within 5 km of Twizel</Description>
+      </Site>
+      <CreationDate>2002-07-04T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>15</TotalNumberChannels>
+      <SelectedNumberChannels>2</SelectedNumberChannels>
+      <Channel code="BN2" startDate="2015-03-02T23:18:25.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.254589089</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.098339469</Longitude>
+        <Elevation>476.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">23.0</Azimuth>
+        <Dip unit="DEGREES">0.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:491">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>491</SerialNumber>
+          <InstallationDate>2015-03-02T23:18:25.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:491">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>491</SerialNumber>
+          <InstallationDate>2015-03-02T23:18:25.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+      <Channel code="BNZ" startDate="2015-03-02T23:18:25.000000Z" endDate="2020-06-16T00:00:00.000000Z" restrictedStatus="open" locationCode="20">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.254589089</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">170.098339469</Longitude>
+        <Elevation>476.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">50.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>50</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#FBA-ES-T-BASALT:491">
+          <Type>Accelerometer</Type>
+          <Description>Kinemetrics FBA-ES-T-BASALT Accelerometer</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>FBA-ES-T-BASALT</Model>
+          <SerialNumber>491</SerialNumber>
+          <InstallationDate>2015-03-02T23:18:25.000000Z</InstallationDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#BASALT:491">
+          <Type>Strong Motion Recorder</Type>
+          <Description>Kinemetrics BASALT Strong Motion Recorder</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>BASALT</Model>
+          <SerialNumber>491</SerialNumber>
+          <InstallationDate>2015-03-02T23:18:25.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>427336.11778048</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s**2</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="WKZ" startDate="2004-06-03T00:00:00.000000Z" restrictedStatus="open">
+      <Description>New Zealand National Seismograph Network</Description>
+      <Comment>
+        <Value>Location is given in WGS84</Value>
+      </Comment>
+      <Latitude datum="WGS84" unit="DEGREES">-44.827021353</Latitude>
+      <Longitude datum="WGS84" unit="DEGREES">169.017561979</Longitude>
+      <Elevation>558.0</Elevation>
+      <Site>
+        <Name>Wanaka</Name>
+        <Description>17 km south-west of Wanaka</Description>
+      </Site>
+      <CreationDate>2004-06-03T00:00:00.000000Z</CreationDate>
+      <TotalNumberChannels>30</TotalNumberChannels>
+      <SelectedNumberChannels>1</SelectedNumberChannels>
+      <Channel code="HHZ" startDate="2017-06-28T20:20:01.000000Z" endDate="2021-12-08T20:43:00.000000Z" restrictedStatus="open" locationCode="10">
+        <Comment>
+          <Value>Location estimated from internal GPS clock</Value>
+        </Comment>
+        <Comment>
+          <Value>Location is given in WGS84</Value>
+        </Comment>
+        <Comment>
+          <Value>Sensor orientation not known</Value>
+        </Comment>
+        <Latitude datum="WGS84" unit="DEGREES">-44.827021353</Latitude>
+        <Longitude datum="WGS84" unit="DEGREES">169.017561979</Longitude>
+        <Elevation>558.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <Type>CONTINUOUS</Type>
+        <Type>GEOPHYSICAL</Type>
+        <SampleRate unit="SAMPLES/S">100.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>100</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <Sensor resourceId="Sensor#CMG-3ESP:T3G77">
+          <Type>Broadband Seismometer</Type>
+          <Description>Guralp CMG-3ESP Broadband Seismometer</Description>
+          <Manufacturer>Guralp</Manufacturer>
+          <Model>CMG-3ESP</Model>
+          <SerialNumber>T3G77</SerialNumber>
+          <InstallationDate>2004-06-03T00:00:00.000000Z</InstallationDate>
+          <RemovalDate>2021-12-08T20:43:00.000000Z</RemovalDate>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#Q330S/6:6070">
+          <Type>Datalogger</Type>
+          <Description>Kinemetrics Q330S Datalogger</Description>
+          <Manufacturer>Kinemetrics</Manufacturer>
+          <Model>Q330S/6</Model>
+          <SerialNumber>6070</SerialNumber>
+          <InstallationDate>2017-06-28T20:20:01.000000Z</InstallationDate>
+        </DataLogger>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>838860800.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>count</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+        </Response>
+      </Channel>
+    </Station>
+  </Network>
+</FDSNStationXML>

@@ -1,0 +1,1386 @@
+<?xml version='1.0' encoding='utf-8'?>
+<q:quakeml xmlns="http://quakeml.org/xmlns/bed/1.2" xmlns:q="http://quakeml.org/xmlns/quakeml/1.2">
+  <eventParameters publicID="smi:local/6dfeebac-e5f2-4c88-a715-7a5c502e021d">
+    <event publicID="smi:nz.org.geonet/2019p345502">
+      <preferredOriginID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</preferredOriginID>
+      <preferredMagnitudeID>smi:nz.org.geonet/Origin/20190508200547.081738.29824/netMag/M</preferredMagnitudeID>
+      <type>earthquake</type>
+      <description>
+        <text>Otago</text>
+        <type>region name</type>
+      </description>
+      <creationInfo>
+        <agencyID>WEL(GNS_Primary)</agencyID>
+        <author>scevent@kseqp02.geonet.org.nz</author>
+        <creationTime>2019-05-08T20:04:11.657107Z</creationTime>
+      </creationInfo>
+      <origin publicID="smi:nz.org.geonet/Origin/20190508200547.081738.29824">
+        <time>
+          <value>2019-05-08T20:03:32.781766Z</value>
+          <uncertainty>0.4394402199</uncertainty>
+          <confidenceLevel>89.99999762</confidenceLevel>
+        </time>
+        <latitude>
+          <value>-44.26753616</value>
+          <uncertainty>3.777714373</uncertainty>
+          <confidenceLevel>89.99999762</confidenceLevel>
+        </latitude>
+        <longitude>
+          <value>169.3571014</value>
+          <uncertainty>2.175260216</uncertainty>
+          <confidenceLevel>89.99999762</confidenceLevel>
+        </longitude>
+        <depth>
+          <value>5258.625031</value>
+          <uncertainty>4807.440195</uncertainty>
+          <confidenceLevel>89.99999762</confidenceLevel>
+        </depth>
+        <methodID>smi:nz.org.geonet/LOCSAT</methodID>
+        <earthModelID>smi:nz.org.geonet/iasp91</earthModelID>
+        <quality>
+          <associatedPhaseCount>22</associatedPhaseCount>
+          <usedPhaseCount>22</usedPhaseCount>
+          <associatedStationCount>15</associatedStationCount>
+          <usedStationCount>15</usedStationCount>
+          <depthPhaseCount>0</depthPhaseCount>
+          <standardError>0.5461824588</standardError>
+          <azimuthalGap>54.93072128</azimuthalGap>
+          <minimumDistance>0.09662742913</minimumDistance>
+          <maximumDistance>1.408822536</maximumDistance>
+          <medianDistance>0.6053814292</medianDistance>
+        </quality>
+        <evaluationMode>manual</evaluationMode>
+        <evaluationStatus>confirmed</evaluationStatus>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:47.082194Z</creationTime>
+        </creationInfo>
+        <originUncertainty>
+          <preferredDescription>confidence ellipsoid</preferredDescription>
+          <horizontalUncertainty>4359.229622</horizontalUncertainty>
+          <minHorizontalUncertainty>2809.533862</minHorizontalUncertainty>
+          <maxHorizontalUncertainty>4944.874304</maxHorizontalUncertainty>
+          <azimuthMaxHorizontalUncertainty>5.651100456</azimuthMaxHorizontalUncertainty>
+          <confidenceEllipsoid>
+            <semiMajorAxisLength>8092784.439</semiMajorAxisLength>
+            <semiMinorAxisLength>3036868.053</semiMinorAxisLength>
+            <semiIntermediateAxisLength>4753220.338</semiIntermediateAxisLength>
+            <majorAxisPlunge>58.88449579</majorAxisPlunge>
+            <majorAxisAzimuth>174.1844129</majorAxisAzimuth>
+            <majorAxisRotation>12.59559444</majorAxisRotation>
+          </confidenceEllipsoid>
+        </originUncertainty>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.48772.29813_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.48772.29813</pickID>
+          <phase>P</phase>
+          <azimuth>292.524353</azimuth>
+          <distance>0.09662742913</distance>
+          <timeResidual>0.3757998943</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.487908.29814_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.487908.29814</pickID>
+          <phase>S</phase>
+          <azimuth>292.524353</azimuth>
+          <distance>0.09662742913</distance>
+          <timeResidual>0.304587841</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.48802.29815_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.48802.29815</pickID>
+          <phase>P</phase>
+          <azimuth>329.4893494</azimuth>
+          <distance>0.4457256794</distance>
+          <timeResidual>0.2894017696</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488096.29816_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488096.29816</pickID>
+          <phase>S</phase>
+          <azimuth>329.4893494</azimuth>
+          <distance>0.4457256794</distance>
+          <timeResidual>-0.4933512211</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200342.49-AIC-NZ.JCZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200342.49-AIC-NZ.JCZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>295.0831909</azimuth>
+          <distance>0.4549161196</distance>
+          <timeResidual>0.4965007305</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200454.543759.29527_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200454.543759.29527</pickID>
+          <phase>S</phase>
+          <azimuth>295.0831909</azimuth>
+          <distance>0.4549161196</distance>
+          <timeResidual>-0.2289879322</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488185.29817_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488185.29817</pickID>
+          <phase>P</phase>
+          <azimuth>88.86549377</azimuth>
+          <distance>0.5327420235</distance>
+          <timeResidual>0.5024726391</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488264.29818_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488264.29818</pickID>
+          <phase>S</phase>
+          <azimuth>88.86549377</azimuth>
+          <distance>0.5327420235</distance>
+          <timeResidual>-0.3194601536</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488337.29819_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488337.29819</pickID>
+          <phase>P</phase>
+          <azimuth>298.0296021</azimuth>
+          <distance>0.5692262053</distance>
+          <timeResidual>0.5521657467</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488405.29820_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488405.29820</pickID>
+          <phase>S</phase>
+          <azimuth>298.0296021</azimuth>
+          <distance>0.5692262053</distance>
+          <timeResidual>0.2010810375</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200344.55-AIC-NZ.WKZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200344.55-AIC-NZ.WKZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>203.341629</azimuth>
+          <distance>0.6098226905</distance>
+          <timeResidual>-0.2711136341</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200345.11-AIC-NZ.LBZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200345.11-AIC-NZ.LBZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>101.5271835</azimuth>
+          <distance>0.6053814292</distance>
+          <timeResidual>0.3690392971</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200454.543948.29528_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200454.543948.29528</pickID>
+          <phase>S</phase>
+          <azimuth>101.5271835</azimuth>
+          <distance>0.6053814292</distance>
+          <timeResidual>-0.3517067432</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200545.488486.29821_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200545.488486.29821</pickID>
+          <phase>P</phase>
+          <azimuth>45.42538452</azimuth>
+          <distance>0.7530907393</distance>
+          <timeResidual>-0.6480209827</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200347.78-AIC-NZ.FOZ.11.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200347.78-AIC-NZ.FOZ.11.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>24.42007065</azimuth>
+          <distance>0.8068777919</distance>
+          <timeResidual>-0.6446611881</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200350.91-AIC-NZ.EAZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200350.91-AIC-NZ.EAZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>182.0517578</azimuth>
+          <distance>0.964066267</distance>
+          <timeResidual>-0.3826191425</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200353.47-AIC-NZ.MSZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200353.47-AIC-NZ.MSZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>247.893158</azimuth>
+          <distance>1.101740956</distance>
+          <timeResidual>-0.09496617317</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/Pick/20190508200454.544054.29529_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/Pick/20190508200454.544054.29529</pickID>
+          <phase>S</phase>
+          <azimuth>247.893158</azimuth>
+          <distance>1.101740956</distance>
+          <timeResidual>-1.17360425</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200354.27-AIC-NZ.GCSZ.10.EHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200354.27-AIC-NZ.GCSZ.10.EHZ</pickID>
+          <phase>P</phase>
+          <azimuth>36.76948547</azimuth>
+          <distance>1.182315111</distance>
+          <timeResidual>-0.5657074451</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200355.36-AIC-NZ.ODZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200355.36-AIC-NZ.ODZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>130.6435242</azimuth>
+          <distance>1.202937603</distance>
+          <timeResidual>0.2106807232</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200358.67-AIC-NZ.ARCZ.10.EHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200358.67-AIC-NZ.ARCZ.10.EHZ</pickID>
+          <phase>P</phase>
+          <azimuth>76.89624786</azimuth>
+          <distance>1.349375129</distance>
+          <timeResidual>1.239187956</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+        <arrival publicID="smi:nz.org.geonet/20190508.200358.97-AIC-NZ.MLZ.10.HHZ_Origin/20190508200547.081738.29824">
+          <pickID>smi:nz.org.geonet/20190508.200358.97-AIC-NZ.MLZ.10.HHZ</pickID>
+          <phase>P</phase>
+          <azimuth>218.3043365</azimuth>
+          <distance>1.408822536</distance>
+          <timeResidual>0.6334941387</timeResidual>
+          <timeWeight>1.0</timeWeight>
+        </arrival>
+      </origin>
+      <magnitude publicID="smi:nz.org.geonet/Magnitude/20190508200623.060238.29981">
+        <mag>
+          <value>3.266874718</value>
+          <uncertainty>0.1477348226</uncertainty>
+        </mag>
+        <type>ML</type>
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <methodID>smi:nz.org.geonet/trimmed_mean</methodID>
+        <stationCount>8</stationCount>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.060472.29982</stationMagnitudeID>
+          <weight>0.75</weight>
+          <residual>0.2109512806</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.060755.29983</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>-0.06064960104</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.060989.29984</stationMagnitudeID>
+          <weight>0.75</weight>
+          <residual>-0.2065609354</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.061219.29985</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>0.04018068155</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.061418.29986</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>0.1929021995</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.061639.29987</stationMagnitudeID>
+          <weight>0.0</weight>
+          <residual>0.2566736005</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.061916.29988</stationMagnitudeID>
+          <weight>0.0</weight>
+          <residual>-0.2359171889</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.062158.29989</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>-0.008583075634</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.062352.29990</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>-0.1834318455</residual>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200623.062571.29991</stationMagnitudeID>
+          <weight>1.0</weight>
+          <residual>0.01628888228</residual>
+        </stationMagnitudeContribution>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.060258Z</creationTime>
+        </creationInfo>
+      </magnitude>
+      <magnitude publicID="smi:nz.org.geonet/Magnitude/20190508200623.062696.29992">
+        <mag>
+          <value>3.046392084</value>
+          <uncertainty>0.1512726899</uncertainty>
+        </mag>
+        <type>MLv</type>
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <methodID>smi:nz.org.geonet/trimmed_mean</methodID>
+        <stationCount>8</stationCount>
+        <evaluationStatus>confirmed</evaluationStatus>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.657259.30019</stationMagnitudeID>
+          <weight>0.75</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.657489.30020</stationMagnitudeID>
+          <weight>0.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.657757.30021</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.65799.30022</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.658192.30023</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.658405.30024</stationMagnitudeID>
+          <weight>0.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.658643.30025</stationMagnitudeID>
+          <weight>0.75</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.658869.30026</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.659119.30027</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <stationMagnitudeContribution>
+          <stationMagnitudeID>smi:nz.org.geonet/StationMagnitude/20190508200630.659342.30028</stationMagnitudeID>
+          <weight>1.0</weight>
+        </stationMagnitudeContribution>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.657000Z</creationTime>
+        </creationInfo>
+      </magnitude>
+      <magnitude publicID="smi:nz.org.geonet/Origin/20190508200547.081738.29824/netMag/M">
+        <mag>
+          <value>3.046392084</value>
+        </mag>
+        <type>M</type>
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <methodID>smi:nz.org.geonet/weighted_average</methodID>
+        <stationCount>8</stationCount>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scmag@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:38.886849Z</creationTime>
+        </creationInfo>
+      </magnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.060472.29982">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.477825999</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200433.088107.1651687</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.060508Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.060755.29983">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.206225117</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200445.105768.1651690</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="WKZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.060782Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.060989.29984">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.060313783</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200443.102867.1651689</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.061018Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.061219.29985">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.3070554</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200451.617816.1651693</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="FOZ" locationCode="11" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.061245Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.061418.29986">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.459776917</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200501.625486.1651695</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="EAZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.061444Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.061639.29987">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.523548318</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200510.639103.1651697</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.061666Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.061916.29988">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.030957529</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200511.638519.1651698</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="GCSZ" locationCode="10" channelCode="EH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.061958Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.062158.29989">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.258291642</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200513.140444.1651700</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="ODZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.062184Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.062352.29990">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.083442873</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200524.655739.1651703</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="ARCZ" locationCode="10" channelCode="EH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.062377Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200623.062571.29991">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.2831636</value>
+        </mag>
+        <type>ML</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200533.784938.1651709</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="MLZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:23.062597Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.657259.30019">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.289340787</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656214.30009</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.657287Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.657489.30020">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>2.722601556</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656345.30010</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.657515Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.657757.30021">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.069460981</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656403.30011</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="WKZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.657783Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.65799.30022">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>2.975900907</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656454.30012</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="FOZ" locationCode="11" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.658016Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.658192.30023">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.191565891</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656501.30013</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="EAZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.658217Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.658405.30024">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.395377357</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656548.30014</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.658431Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.658643.30025">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>2.741778609</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656592.30015</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="GCSZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.658671Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.658869.30026">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.006381533</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656633.30016</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="ODZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.658895Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.659119.30027">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>2.983032098</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.656679.30017</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="ARCZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.659148Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:nz.org.geonet/StationMagnitude/20190508200630.659342.30028">
+        <originID>smi:nz.org.geonet/Origin/20190508200547.081738.29824</originID>
+        <mag>
+          <value>3.098259669</value>
+        </mag>
+        <type>MLv</type>
+        <amplitudeID>smi:nz.org.geonet/Amplitude/20190508200630.65678.30018</amplitudeID>
+        <waveformID networkCode="NZ" stationCode="MLZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.659367Z</creationTime>
+        </creationInfo>
+      </stationMagnitude>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.48772.29813">
+        <time>
+          <value>2019-05-08T20:03:35.828335Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MECS" locationCode="20" channelCode="BN1"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.487856Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.487908.29814">
+        <time>
+          <value>2019-05-08T20:03:37.699492Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MECS" locationCode="20" channelCode="BN2"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.487979Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.48802.29815">
+        <time>
+          <value>2019-05-08T20:03:42.118608Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="HDWS" locationCode="20" channelCode="BNZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488067Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488096.29816">
+        <time>
+          <value>2019-05-08T20:03:47.911232Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="HDWS" locationCode="20" channelCode="BN2"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488139Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200342.49-AIC-NZ.JCZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:42.493129Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:03:51.992885Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200454.543759.29527">
+        <time>
+          <value>2019-05-08T20:03:48.464589Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HHE"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:54.543869Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488185.29817">
+        <time>
+          <value>2019-05-08T20:03:43.920094Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="TWAS" locationCode="20" channelCode="BNZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488230Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488264.29818">
+        <time>
+          <value>2019-05-08T20:03:50.827449Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="TWAS" locationCode="20" channelCode="BN2"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488308Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488337.29819">
+        <time>
+          <value>2019-05-08T20:03:44.636707Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="NSBS" locationCode="21" channelCode="BNZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488377Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488405.29820">
+        <time>
+          <value>2019-05-08T20:03:52.499547Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="NSBS" locationCode="21" channelCode="BN2"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488446Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200344.55-AIC-NZ.WKZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:44.553135Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="WKZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:03:57.505387Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200345.11-AIC-NZ.LBZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:45.113126Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:03:54.999236Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200454.543948.29528">
+        <time>
+          <value>2019-05-08T20:03:53.085202Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HHE"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:54.543999Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200545.488486.29821">
+        <time>
+          <value>2019-05-08T20:03:46.796500Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MCNS" locationCode="20" channelCode="BNZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:45.488529Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200347.78-AIC-NZ.FOZ.11.HHZ">
+        <time>
+          <value>2019-05-08T20:03:47.783130Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="FOZ" locationCode="11" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:03:58.507812Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200350.91-AIC-NZ.EAZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:50.913128Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="EAZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:01.013531Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200353.47-AIC-NZ.MSZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:53.473199Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:06.527949Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/Pick/20190508200454.544054.29529">
+        <time>
+          <value>2019-05-08T20:04:07.640138Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HHE"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2,15)</filterID>
+        <phaseHint>S</phaseHint>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:54.544100Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200354.27-AIC-NZ.GCSZ.10.EHZ">
+        <time>
+          <value>2019-05-08T20:03:54.273143Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="GCSZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:07.029642Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200355.36-AIC-NZ.ODZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:55.368393Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="ODZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:06.027327Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200358.67-AIC-NZ.ARCZ.10.EHZ">
+        <time>
+          <value>2019-05-08T20:03:58.673125Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="ARCZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:11.543059Z</creationTime>
+        </creationInfo>
+      </pick>
+      <pick publicID="smi:nz.org.geonet/20190508.200358.97-AIC-NZ.MLZ.10.HHZ">
+        <time>
+          <value>2019-05-08T20:03:58.978393Z</value>
+        </time>
+        <waveformID networkCode="NZ" stationCode="MLZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <filterID>smi:nz.org.geonet/BW(4,2.5,15)</filterID>
+        <methodID>smi:nz.org.geonet/AIC</methodID>
+        <phaseHint>P</phaseHint>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scautopick@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:11.548282Z</creationTime>
+        </creationInfo>
+      </pick>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200433.088107.1651687">
+        <genericAmplitude>
+          <value>8.264499366</value>
+          <lowerUncertainty>1.404181774</lowerUncertainty>
+          <upperUncertainty>1.404181774</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:03:50.728129Z</reference>
+          <begin>-13.234999</begin>
+          <end>38.065</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200342.49-AIC-NZ.JCZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:33.088169Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200445.105768.1651690">
+        <genericAmplitude>
+          <value>2.33081813</value>
+          <lowerUncertainty>0.2910529646</lowerUncertainty>
+          <upperUncertainty>0.2910529646</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:03:54.563135Z</reference>
+          <begin>-15.009999</begin>
+          <end>42.77</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200344.55-AIC-NZ.WKZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="WKZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:45.105821Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200443.102867.1651689">
+        <genericAmplitude>
+          <value>1.678716426</value>
+          <lowerUncertainty>0.01908280815</lowerUncertainty>
+          <upperUncertainty>0.01908280815</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:03:53.403126Z</reference>
+          <begin>-13.289999</begin>
+          <end>44.54</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200345.11-AIC-NZ.LBZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:43.103012Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200451.617816.1651693">
+        <genericAmplitude>
+          <value>2.284754401</value>
+          <lowerUncertainty>0.1705806067</lowerUncertainty>
+          <upperUncertainty>0.1705806067</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:04.208130Z</reference>
+          <begin>-21.424999</begin>
+          <end>43.295</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200347.78-AIC-NZ.FOZ.11.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="FOZ" locationCode="11" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:04:51.617853Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200501.625486.1651695">
+        <genericAmplitude>
+          <value>2.654835603</value>
+          <lowerUncertainty>0.3380511772</lowerUncertainty>
+          <upperUncertainty>0.3380511772</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:06.023128Z</reference>
+          <begin>-20.109999</begin>
+          <end>50.98</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200350.91-AIC-NZ.EAZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="EAZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:01.625586Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200510.639103.1651697">
+        <genericAmplitude>
+          <value>2.588660851</value>
+          <lowerUncertainty>0.2160000106</lowerUncertainty>
+          <upperUncertainty>0.2160000106</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:08.398188Z</reference>
+          <begin>-19.924999</begin>
+          <end>55.575</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200353.47-AIC-NZ.MSZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:10.639158Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200511.638519.1651698">
+        <genericAmplitude>
+          <value>0.7492026801</value>
+          <lowerUncertainty>0.1344185334</lowerUncertainty>
+          <upperUncertainty>0.1344185334</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:13.713143Z</reference>
+          <begin>-24.439999</begin>
+          <end>54.29</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200354.27-AIC-NZ.GCSZ.10.EHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="GCSZ" locationCode="10" channelCode="EH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:11.638587Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200513.140444.1651700">
+        <genericAmplitude>
+          <value>1.233446704</value>
+          <lowerUncertainty>0.1619110838</lowerUncertainty>
+          <upperUncertainty>0.1619110838</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:13.163393Z</reference>
+          <begin>-22.794999</begin>
+          <end>57.245</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200355.36-AIC-NZ.ODZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="ODZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:13.140496Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200524.655739.1651703">
+        <genericAmplitude>
+          <value>0.6853694608</value>
+          <lowerUncertainty>0.1579801083</lowerUncertainty>
+          <upperUncertainty>0.1579801083</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:16.833125Z</reference>
+          <begin>-23.159999</begin>
+          <end>62.01</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200358.67-AIC-NZ.ARCZ.10.EHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="ARCZ" locationCode="10" channelCode="EH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:24.655796Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200533.784938.1651709">
+        <genericAmplitude>
+          <value>1.003034003</value>
+          <lowerUncertainty>0.2080267347</lowerUncertainty>
+          <upperUncertainty>0.2080267347</upperUncertainty>
+        </genericAmplitude>
+        <type>ML</type>
+        <timeWindow>
+          <reference>2019-05-08T20:04:24.633393Z</reference>
+          <begin>-30.654999</begin>
+          <end>55.285</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200358.97-AIC-NZ.MLZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="MLZ" locationCode="10" channelCode="HH"></waveformID>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>scamp@kseqp02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:05:33.784981Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656214.30009">
+        <genericAmplitude>
+          <value>5.354653082</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>39.14560015</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:03:43.183129Z</reference>
+          <begin>-5.69</begin>
+          <end>46.13</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200342.49-AIC-NZ.JCZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="JCZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656295Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656345.30010">
+        <genericAmplitude>
+          <value>0.771374208</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>7.17379845</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:03:54.583126Z</reference>
+          <begin>-14.47</begin>
+          <end>42.9</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200345.11-AIC-NZ.LBZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="LBZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656374Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656403.30011">
+        <genericAmplitude>
+          <value>1.701156432</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>9.675195878</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:03:54.733135Z</reference>
+          <begin>-15.18</begin>
+          <end>42.41</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200344.55-AIC-NZ.WKZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="WKZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656429Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656454.30012">
+        <genericAmplitude>
+          <value>1.065822858</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>4.919106956</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:04.343130Z</reference>
+          <begin>-21.56</begin>
+          <end>43.34</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200347.78-AIC-NZ.FOZ.11.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="FOZ" locationCode="11" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656480Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656501.30013">
+        <genericAmplitude>
+          <value>1.43161621</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>15.81474026</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:04.893128Z</reference>
+          <begin>-18.98</begin>
+          <end>51.76</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200350.91-AIC-NZ.EAZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="EAZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656523Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656548.30014">
+        <genericAmplitude>
+          <value>1.927099746</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>19.42123742</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:08.743185Z</reference>
+          <begin>-20.27</begin>
+          <end>55.45</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200353.47-AIC-NZ.MSZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="MSZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656573Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656592.30015">
+        <genericAmplitude>
+          <value>0.3849642517</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>20.53898454</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:18.203143Z</reference>
+          <begin>-28.93</begin>
+          <end>49.85</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200354.27-AIC-NZ.GCSZ.10.EHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="GCSZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656615Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656633.30016">
+        <genericAmplitude>
+          <value>0.69057409</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>5.654432296</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:12.108393Z</reference>
+          <begin>-21.74</begin>
+          <end>57.76</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200355.36-AIC-NZ.ODZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="ODZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656659Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.656679.30017">
+        <genericAmplitude>
+          <value>0.5438936325</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>29.33364929</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:19.073125Z</reference>
+          <begin>-25.4</begin>
+          <end>59.46</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200358.67-AIC-NZ.ARCZ.10.EHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="ARCZ" locationCode="10" channelCode="EHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656739Z</creationTime>
+        </creationInfo>
+      </amplitude>
+      <amplitude publicID="smi:nz.org.geonet/Amplitude/20190508200630.65678.30018">
+        <genericAmplitude>
+          <value>0.6552570834</value>
+        </genericAmplitude>
+        <type>MLv</type>
+        <snr>4.132011763</snr>
+        <timeWindow>
+          <reference>2019-05-08T20:04:00.248393Z</reference>
+          <begin>-6.27</begin>
+          <end>80.88</end>
+        </timeWindow>
+        <pickID>smi:nz.org.geonet/20190508.200358.97-AIC-NZ.MLZ.10.HHZ</pickID>
+        <waveformID networkCode="NZ" stationCode="MLZ" locationCode="10" channelCode="HHZ"></waveformID>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>WEL(GNS_Primary)</agencyID>
+          <author>connorr@kseqx02.geonet.org.nz</author>
+          <creationTime>2019-05-08T20:06:30.656813Z</creationTime>
+        </creationInfo>
+      </amplitude>
+    </event>
+  </eventParameters>
+</q:quakeml>

@@ -1,23 +1,11 @@
-"""
-Functions to help interact with focal mechanisms.
-
-"""
-
 import matplotlib.pyplot as plt
-import mplstereonet
-from mplstereonet import stereonet_math
-
-from obspy.core.event import Event
+import utilities.mplstereonet
+from utilities.mplstereonet import stereonet_math
 
 from typing import List
 from collections import namedtuple
 
-# Hack to cope with numpy change
-import numpy as np
-
-np.float = float
-
-Polarity = namedtuple("Polarity", ("azimuth", "toa", "polarity", "station"))
+Polarity = namedtuple("Polarity", ("azimuth", "toa", "polarity"))
 
 UPS = ("U", "up", "positive", "compressional")
 DOWNS = ("D", "down", "negative", "dilatational")
@@ -32,7 +20,7 @@ POLARITY_PROPS = {
 class NodalPlane():
     def __init__(self, strike, dip, rake):
         self.strike = strike % 360
-        # TODO: I could take care of this being out of bounds.
+
         assert 0 <= dip <= 90, "Dip must be between 0 and 90"
         self.dip = dip
         rake = rake % 360
@@ -44,7 +32,6 @@ class NodalPlane():
         return (
             f"NodalPlane(strike={self.strike}, dip={self.dip}, "
             f"rake={self.rake})")
-    # TODO: Implement finding aux plane and P,T,B axes.
 
     def plot(self, ax = None, show: bool = False, color: str = "k", 
              label: str = None, markeredgecolor: str = None):
@@ -57,11 +44,9 @@ class NodalPlane():
         artists = []
         artists.extend(ax.plane(
             self.strike, self.dip, color=color, label=label))
-        # Note rake is measured anticlockwise from horizontal for seismologists,
-        # but clockwise for geologists (as in mplstereonet)
+
         rake = -1 * self.rake
-        # if self.strike < 180:
-        #     rake = -1 * rake
+
         artists.extend(ax.rake(
             self.strike, self.dip, rake, color=color, label=rake_label,
             markeredgecolor=markeredgecolor))
@@ -80,82 +65,44 @@ class FocalMechanism():
         nodal_plane_2: NodalPlane = None,
         polarities: List[Polarity] = None
     ):
-        self.nodal_plane_1 = nodal_plane_1 or NodalPlane(45, 45, 45)
-        self.nodal_plane_2 = nodal_plane_2 or NodalPlane(35, 35, 35)
+        self.nodal_plane_1 = nodal_plane_1 or NodalPlane(0, 90, 0)
+        self.nodal_plane_2 = nodal_plane_2 or NodalPlane(0, 90, 0)
         self.polarities = polarities or []
 
-    @classmethod
-    def from_event(cls, event: Event):
-        try:
-            origin = event.preferred_origin() or event.origins[-1]
-        except IndexError:
-            raise NotImplementedError("Event needs an origin")
-        polarities = []
-
-        for pick in event.picks:
-            if pick.polarity and pick.phase_hint.startswith("P"):
-                # Get the arrival
-                pick_seed_id = pick.waveform_id.get_seed_string()
-                print(f"Found polarity of {pick.polarity} for {pick_seed_id}")
-                for arr in origin.arrivals:
-                    arr_pick = arr.pick_id.get_referred_object()
-                    if arr_pick and arr_pick.waveform_id.get_seed_string() == pick_seed_id:
-                        if arr.phase == "P":
-                            if arr.takeoff_angle < 0:
-                                toa = abs(arr.takeoff_angle)
-                                az = arr.azimuth % 360
-                            else:
-                                toa = arr.takeoff_angle
-                                az = (arr.azimuth + 180) % 360
-                            polarity = Polarity(az, toa,
-                                                pick.polarity,
-                                                station=pick_seed_id)
-                            polarities.append(polarity)
-                            break
-                else:
-                    print(f"No arrival found for polarity pick on {pick_seed_id}")
-        return cls(polarities=polarities)
-
-    def plot(self, show: bool = True, label: bool = True) -> plt.Figure:
+    def plot(self, show: bool = True) -> plt.Figure:
         fig = plt.figure()
         ax = fig.add_subplot(111, projection="stereonet")
 
-        self.plot_polarities(ax=ax, show=False, label=label)
+        self.plot_polarities(ax=ax, show=False)
         for nodal_plane in (self.nodal_plane_1, self.nodal_plane_2):
             nodal_plane.plot(ax=ax, show=False)
         ax.legend()
         ax.grid()
         if show:
-            plt.show(block=True)
+            plt.show()
         return fig
 
-    def plot_polarities(self, ax = None, show: bool = False, label: bool = True) -> plt.Axes:
+    def plot_polarities(self, ax = None, show: bool = False) -> plt.Axes:
         if not ax:
             fig = plt.figure()
             ax = fig.add_subplot(111, projection="stereonet")
         for polarity in self.polarities:
             toa, baz = polarity.toa, polarity.azimuth
-            assert 0 <= toa <= 180, f"Take off angle ({toa}) does not lie between 0 and 180"
             if 0. <= toa < 90.:
-                toa = 90. - toa  # complement for downward angles
+                toa = 90. - toa 
             elif 90. <= toa <= 180.:
-                toa = 270. - toa  # project upward angles
-            baz -= 90 # Calculate strike azi from direct (dip-pointing) azi
+                toa = 270. - toa  
+            baz -= 90 
             if polarity.polarity in UPS:
                 plot_kwargs = POLARITY_PROPS["up"]
             elif polarity.polarity in DOWNS:
                 plot_kwargs = POLARITY_PROPS["down"]
             else:
                 plot_kwargs = POLARITY_PROPS["unknown"]
-            # Ensure boundedness
-            baz = baz % 360
             ax.rake(baz, toa, 90, **plot_kwargs)
-            if label:
-                lon, lat = mplstereonet.rake(baz, toa, 90)
-                ax.text(lon[0], lat[0], polarity.station)
-            plot_kwargs.pop("label", None)  # Only label once
+            plot_kwargs.pop("label", None) 
         if show:
-            plt.show(block=True)
+            plt.show()
         return ax
 
     def tweak_np2(self, increment: float = 0.5, show: bool = True):
@@ -210,7 +157,7 @@ class FocalMechanism():
         rake_slider.on_changed(update)
 
         if show:
-            plt.show(block=True)
+            plt.show()
         return fig
 
     def find_planes(self, increment: float = 0.5, show: bool = True):
@@ -301,15 +248,8 @@ class FocalMechanism():
         np2rake_slider.on_changed(update_np2)
 
         if show:
-            plt.show(block=True)
+            plt.show()
         return fig
-
-"""
-TODO make sliders for strike, dip and rake of conjugate plane so for jupyter.
-The idea is to have:
-- another version where they input the azimuth, toa and polarity into a table,
-  then it plots those data and provides two sets of s/d/r sliders and they have to work out the nodal planes.
-"""
 
 if __name__ == "__main__":
     np1 = NodalPlane(0, 30, 120)
@@ -325,5 +265,3 @@ if __name__ == "__main__":
     fm = FocalMechanism(
         nodal_plane_1=np1, nodal_plane_2=np2, polarities=polarities)
     fm.find_planes()
-
-        
