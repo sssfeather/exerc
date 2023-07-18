@@ -1,9 +1,3 @@
-""" 
-Simple earthquake location inversion tools.
-
-Author: Calum Chamberlain
-"""
-
 import numpy as np
 import math
 from datetime import datetime as dt
