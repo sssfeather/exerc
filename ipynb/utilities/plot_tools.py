@@ -9,7 +9,7 @@ from scipy.signal import get_window
 from scipy.fftpack import rfft, irfft
 
 
-AMP_LIMIT = 1e-5  # Limit phase to only plot amplitudes above this.
+AMP_LIMIT = 1e-5  
 
 
 def plot_fft(x: np.array, y: np.array, strict_length: bool = True,

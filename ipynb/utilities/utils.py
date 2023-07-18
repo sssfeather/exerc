@@ -12,20 +12,6 @@ def trace_psd(tr, metadata,
               period_smoothing_width_octaves=1.0,
               period_step_octaves=0.125,
               special_handling=None):
-    """Calculate the power spectral density (PSD) of the given
-    trace `tr`, and returns the values in dB at the given `psd_periods`.
-
-    :param tr: ObsPy Trace
-    :param metadata: Response information of instrument. It must be
-        a :class:`~obspy.core.inventory.inventory.Inventory`
-    :param psd_periods: numeric list/array of periods (in second) or None.
-    :param smooth_on_all_periods: boolean (default: False).
-    :param period_smoothing_width_octaves: float. Ignored if `psd_periods`
-        is None.
-    :param period_step_octaves: float (default=0.125). Ignored if `psd_periods`
-        is None or `smooth_on_all_periods` is False.
-    :param special_handling: sensor details
-    """
     try:
         tr.data[tr.data.mask] = 0.0
     except AttributeError:
@@ -547,32 +533,6 @@ def _setup_yield_period_binning(psd_periods, period_smoothing_width_octaves,
 def design_filter(sample_rate, data_length, corners, order=4,
                   window_type='butter', filter_type='bandpass',
                   ripple=None, attenuation=None):
-    """
-    Design a frequency-domain filter.
-
-    :type sample_rate: float
-    :param sample_rate: Sampling-rate in Hz
-    :type data_length: int
-    :param data_length:
-        Length of data to apply to - will use the next-fast
-        fft length from this.
-    :type corners: array-like
-    :param corners: list of corners for filter in order, in Hz
-    :type order: int
-    :param order: Filter order
-    :type window_type: str
-    :param window_type:
-        Type of window to use, must be one of:
-        'butter' : Butterworth
-        'cheby1': Chebyshev I
-        'cheby2': Chenyshev II
-        'ellip': Cauer/elliptic
-        'bessel': Bessel/Thomson
-    :type filter_type: str
-    :param filter_type:
-        Type of band to use, must be one of:
-        'bandpass', 'lowpass', 'highpass', 'bandstop'
-    """
     nyquist = .5 * sample_rate
     # Check that highpass is usefully less than the nyquist
     if max(corners) > (nyquist * .98):
@@ -590,10 +550,6 @@ def design_filter(sample_rate, data_length, corners, order=4,
 
 def get_tt(event_lat, event_long, sta_lat, sta_long, depth_km,
            model="iasp91", type='first'):
-    """
-    Get the seismic phase arrival time of the specified earthquake
-    at the station.
-    """
     sta_t = locations2degrees(event_lat, event_long, sta_lat, sta_long)
     taup = TauPyModel(model=model)
     arrivals = taup.get_travel_times(source_depth_in_km=depth_km,

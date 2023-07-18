@@ -5,13 +5,11 @@ import logging
 
 LOGGER = logging.getLogger("Geiger")
 
-EARTHRADIUS = 6371  # Global definition of earth radius in km.
+EARTHRADIUS = 6371 
 
 
 class Location():
-    """
-    Location in x, y, z in some co-ordinate system.
-    """
+    
     def __init__(self, x, y, z, origin, strike, dip, 
                  time=None, magnitude=None):
         self.x = x
@@ -44,25 +42,21 @@ class Location():
         return not self.__eq__(other) 
 
     def to_geographic(self):
-        """
-        Convert to Geographic reference frame.
-
-        :returns: Geographic
-        """
+        
         # Rotate back by dip
         s = math.radians(self.strike)
         d = math.radians(90 - self.dip)
         x1 = (self.x * math.cos(-d)) + (self.z * math.sin(-d))
         z = (-self.x * math.sin(-d)) + (self.z * math.cos(-d))
-        # Rotate back by strike into North, East, Down reference
+        
         x = (x1 * math.cos(s)) + (self.y * math.sin(s))
         y = (-x1 * math.sin(s)) + (self.y * math.cos(s)) 
-        # Convert to geographic co-ordinates
-        latitude = y / EARTHRADIUS # Degrees north of origin in radians
+       
+        latitude = y / EARTHRADIUS 
         latitude += math.radians(self.origin.latitude)
         latitude = math.degrees(latitude)
         mean_lat = math.radians((latitude + self.origin.latitude) / 2) 
-        # is this calculation better done in radians?
+        
         longitude = x / (math.cos(mean_lat) * EARTHRADIUS)
         longitude += math.radians(self.origin.longitude)
         longitude = math.degrees(longitude)
@@ -75,9 +69,7 @@ class Location():
 
 
 class Geographic():
-    """
-    Geographic position in lat, long and depth as deg, deg, km (+ve down)
-    """
+    
     def __init__(self, latitude, longitude, depth, time=None, magnitude=None):
         self.latitude = latitude
         self.longitude = longitude
@@ -104,20 +96,7 @@ class Geographic():
         return not self.__eq__(other) 
 
     def to_xyz(self, origin, strike, dip):
-        """
-        Convert geographic location to arbitrary co-ordinate system.
-
-        :type origin: Location
-        :param origin: Origin for new co-ordinate system.
-        :type strike: float
-        :param strike: Degrees clockwise from north to rotate system.
-        :type dip: float
-        :param dip: Degrees down from horizontal to rotate system.
-
-        :returns: Location
-        """
-        # Calculate x, y, z from North, East, Down co-ordinate system
-        # x is km East, y is km North, z is km up
+        
         z = self.depth - origin.depth
         mean_lat = math.radians((self.latitude + origin.latitude) / 2)
         x = math.radians(self.longitude - origin.longitude) # Degrees east
@@ -127,14 +106,10 @@ class Geographic():
 
         s = math.radians(strike)
         d = math.radians(90 - dip)
-        # Rotate through strike (clockwise from North)
+        
         x1 = (x * math.cos(-s)) + (y * math.sin(-s))
         y1 = (-x * math.sin(-s)) + (y * math.cos(-s)) 
-        """
-        x1 is horizontal distance perpendicular to strike,
-        y1 is horizontal distance along strike - this needs no further rotation.
-        """
-        # Rotate z and y1 through dip.
+        
         x2 = (x1 * math.cos(d)) + (z * math.sin(d))
         z1 = (-x1 * math.sin(d)) + (z * math.cos(d))
         return Location(round(x2, 6), round(y1, 6), round(z1, 6),
@@ -144,29 +119,10 @@ class Geographic():
 
 def update_model(p_times, p_locations, s_times, s_locations, model, vp, vs,
                  norm: int = 2):
-    """
-    Recompute model to minimise residuals.
-
-    :type p_times: np.ndarray
-    :param p_times: Observed P arrival times
-    :type p_locations: list of dict with keys "x", "y", "z"
-    :param p_locations: The locations for the p_times observations
-    :type s_times: np.ndarray
-    :param s_times: Observed S arrival times
-    :type s_locations: list of dict with keys "x", "y", "z"
-    :param s_locations: The locations for the s_times observations
-    :type model: dict keyed by "x", "y", "z", "time"
-    :param model: The current model to be updated
-    :type vp: float
-    :param vp: P-wave velocity
-    :type vs: float
-    :param vs: S-wave velocity
-
-    :returns: model
-    """
+    
     data = np.concatenate([p_times, s_times])
     residuals = np.zeros_like(data)
-    condition = np.zeros((len(residuals), 4))  # G matrix in Stein and Wysession
+    condition = np.zeros((len(residuals), 4))  
 
     for i, p_loc in enumerate(p_locations):
         residuals[i], distance = _residual(model, p_loc, p_times[i], vp, True)
@@ -213,32 +169,7 @@ def _residual(model, obs_loc, obs_time, velocity, return_distance=False):
 def geiger_locate_lat_lon(p_times, p_locations, s_times, s_locations, vp, vs,
                           max_it=10, convergence=0.1, starting_depth=5.0,
                           plot=False, l2norm: bool = True):
-    """
-    Locate a seismic source using a simple linearised inversion.
-
-    :type p_times: np.ndarray
-    :param p_times: Observed P arrival times
-    :type p_locations: list of dict with keys "lat", "lon", "z"
-    :param p_locations: The locations for the p_times observations, z should be in km
-    :type s_times: np.ndarray
-    :param s_times: Observed S arrival times
-    :type s_locations: list of dict with keys "lat", "lon", "z"
-    :param s_locations: The locations for the s_times observations z should be in km
-    :type vp: float
-    :param vp: P-wave velocity
-    :type vs: float
-    :param vs: S-wave velocity
-    :type max_it: int
-    :param max_int: Maximum iterations for location
-    :type convergence: float
-    :param convergence: Model change to define convergence
-    :type starting_depth: float
-    :param starting_depth: Depth for starting location
-    :type plot: bool
-    :param plot: Whether or not to plot the location and residual history
-
-    :returns dict
-    """
+   
     p_xyz = [Geographic(latitude=p["lat"], longitude=p["lon"], depth=p["z"])
              for p in p_locations]
     s_xyz = [Geographic(latitude=p["lat"], longitude=p["lon"], depth=p["z"])
@@ -252,7 +183,6 @@ def geiger_locate_lat_lon(p_times, p_locations, s_times, s_locations, vp, vs,
     p_xyz = [{"x": p.x, "y": p.y, "z": -p.z} for p in p_xyz]
     s_xyz = [{"x": p.x, "y": p.y, "z": -p.z} for p in s_xyz]
 
-    # Convert from UTCDateTime to float
     _time = min(np.concatenate([p_times, s_times]))
     _p_times = np.array([_t - _time for _t in p_times])
     _s_times = np.array([_t - _time for _t in s_times])
@@ -262,7 +192,6 @@ def geiger_locate_lat_lon(p_times, p_locations, s_times, s_locations, vp, vs,
         s_locations=s_xyz, vp=vp, vs=vs, max_it=max_it, convergence=convergence,
         starting_depth=starting_depth, plot=plot, l2norm=l2norm)
     
-    # convert location back to lat lon
     model_time = _time + model["time"]
     model = Location(x=model["x"], y=model["y"], z=model["z"], origin=origin,
                      strike=0, dip=90)
@@ -274,32 +203,7 @@ def geiger_locate_lat_lon(p_times, p_locations, s_times, s_locations, vp, vs,
 def geiger_locate(p_times, p_locations, s_times, s_locations, vp, vs,
                   max_it=10, convergence=0.1, starting_depth=5.0, plot=False,
                   l2norm: bool = True):
-    """
-    Locate a seismic source using a simple linearised inversion.
-
-    :type p_times: np.ndarray
-    :param p_times: Observed P arrival times
-    :type p_locations: list of dict with keys "x", "y", "z"
-    :param p_locations: The locations for the p_times observations
-    :type s_times: np.ndarray
-    :param s_times: Observed S arrival times
-    :type s_locations: list of dict with keys "x", "y", "z"
-    :param s_locations: The locations for the s_times observations
-    :type vp: float
-    :param vp: P-wave velocity
-    :type vs: float
-    :param vs: S-wave velocity
-    :type max_it: int
-    :param max_int: Maximum iterations for location
-    :type convergence: float
-    :param convergence: Model change to define convergence
-    :type starting_depth: float
-    :param starting_depth: Depth for starting location
-    :type plot: bool
-    :param plot: Whether or not to plot the location and residual history
-
-    :returns dict
-    """
+    
     import matplotlib.pyplot as plt
     from mpl_toolkits.mplot3d import Axes3D
     from copy import deepcopy
@@ -361,7 +265,6 @@ def geiger_locate(p_times, p_locations, s_times, s_locations, vp, vs,
         scatter_ax.set_ylabel("y")
         scatter_ax.set_zlabel("z")
 
-        # Plot stations
         sta_x = [s["x"] for s in p_locations + s_locations]
         sta_y = [s["y"] for s in p_locations + s_locations]
         sta_z = [s["z"] for s in p_locations + s_locations]

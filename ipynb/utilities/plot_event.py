@@ -1,9 +1,3 @@
-"""
-Plot picks onto waveforms for GeoNet events.
-
-
-"""
-
 import numpy as np
 
 from obspy import Stream
@@ -70,75 +64,8 @@ def plot_polarities(event):
     ax.legend()
     return fig
 
-
-def get_geonet_waveforms(
-    event: Event,
-    delay: float = 0.,
-    length: float = 320.,
-    all_components: bool = False,
-) -> Stream:
-    """
-    Get picked GeoNet waveforms for an event.
-
-    Parameters
-    ----------
-    event:
-        The event to get waveforms for
-    delay:
-        Delay in seconds relative to the origin-time of the event to download 
-        waveforms from
-    length:
-        Total length in seconds for each channel to download
-    all_components:
-        Whether to download all components (True), or just those picked (False)
-
-    Returns
-    -------
-    Stream downloaded.
-    """
-    from obspy.clients.fdsn import Client
-
-    client = Client("GEONET")
-
-    seed_ids = {pick.waveform_id.get_seed_string() for pick in event.picks}
-    if all_components:
-        seed_ids = {sid[0:-1] + "?" for sid in seed_ids}
-    try:
-        origin_time = (event.preferred_origin() or event.origins[0]).time
-    except IndexError:
-        try:
-            origin_time = sorted(event.picks, key=lambda p: p.time)[0].time
-        except IndexError:
-            raise NotImplementedError("No origin time or pick times found")
-    st = Stream()
-    for seed_id in seed_ids:
-        print(f"Downloading for {seed_id}")
-        try:
-            st += client.get_waveforms(
-                *seed_id.split('.'), starttime=origin_time + delay, 
-                endtime=origin_time + length + delay)
-        except Exception as e:
-            print(f"Some error downloading {seed_id}: \n{e}")
-    st.trim(origin_time + delay, origin_time + delay + length)
-    st.merge().sort(["starttime"])
-    return st
-
-
 def plot_picked(event: Event, st: Stream) -> Figure:
-    """
-    Plot picks onto waveforms for an event.
     
-    Parameters
-    ----------
-    event:
-        The event with picks to plot
-    st:
-        The stream to plot onto
-
-    Returns
-    -------
-    Figure of the plot
-    """
     import matplotlib.pyplot as plt
 
     pick_color = {'P': 'r', 'S': 'b'}

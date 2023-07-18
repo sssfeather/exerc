@@ -1,12 +1,3 @@
-"""
-Simple seismic phase picking applet for the GPHS445 course at VUW
-
-:author: Calum Chamberlain
-:date: 7 May 2019
-
-License: LGPL v.3
-"""
-
 from matplotlib.dates import num2date, date2num
 from obspy import UTCDateTime, read_events
 import numpy as np
