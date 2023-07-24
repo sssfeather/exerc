@@ -4,6 +4,7 @@ from scipy import signal, fftpack
 from obspy.core.inventory.inventory import Inventory
 from obspy.geodetics.base import locations2degrees
 from obspy.taup import TauPyModel
+import warnings
 
 
 def trace_psd(tr, metadata,
@@ -685,3 +686,45 @@ def get_snr(trace, pick, pre_wl=10, post_wl=10):
     snr = 10 * np.log10(energy_s / energy_n)
 
     return snr
+
+
+def ricker(f=10, len=0.5, dt=0.002, peak_loc=0.25):
+    """创建一个位移的因果ricker波.
+
+    :param f: risker波中心频率 (默认为10)
+    :param len: float
+    :type len: 输入信号长度,单位为秒(默认为0.5秒)
+    :param dt: float
+    :type dt: 输入时间采样间隔，单位为秒(默认为0.002秒)
+    :param peak_loc: float
+    :type peak_loc: 输入波形峰值的位置,单位为秒(默认为0.25秒)
+    :return: 从t=0开始的Ricker小波
+    :rtype: np.ndarray
+
+    请注意,返回的信号总是从t=0开始。要实现不同的起始点,可以通过移动时间向量来实现。
+
+    """
+    if f <= 0:
+        raise ValueError("Center frequency (f) needs to be positive.")
+
+    if len <= 0:
+        raise ValueError("Signal length (len) needs to be positive.")
+
+    if dt <= 0:
+        raise ValueError("Time interval (dt) needs to be positive.")
+
+    if len < peak_loc:
+        warnings.warn("The peak location is outside the signal range. All "
+                      "zero output will be provided.")
+        return np.zeros(int(len / dt))
+    else:
+        # 根据采样频率/周期、信号长度和峰值位置生成时间序列
+        t = np.linspace(-peak_loc, len - peak_loc - dt, int(len / dt))
+
+        # 将时间移动到正确的位置，即t_out = t + peak_loc
+        # 其中t_out是修正后的时间序列，t是生成的时间序列，peak_loc是峰值位置。
+
+        # 根据提供的参考，生成Ricker小波信号
+        y = (1 - 2 * np.pi ** 2 * f ** 2 * t ** 2) * np.exp(-np.pi ** 2 * f ** 2 * t ** 2)
+
+        return y
