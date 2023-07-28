@@ -74,25 +74,7 @@ bn = (2/T) ∫[f(t) * sin(nωt)] dt （积分区间为一个周期T）
 
 总之，傅里叶级数是将周期信号表示为正弦波和余弦波之和的方法，而傅里叶系数则是这些正弦波和余弦波的振幅
 
-#----------------------------------------------------------------
 
-https://github.com/ThomasLecocq/SeismoRMS
-
-https://github.com/bpptkg/bpptkg-richter
-
-https://github.com/seismohio/localmag
-
-https://github.com/apoorvjha/EarthQuake-Analysis
-
-https://github.com/risdallseis/Earthquake-detection-pipeline
-
-https://github.com/AI4EPS/PhaseNet/blob/master/docs/example_interactive.ipynb
-
-https://github.com/eamonustc/est_azimuth
-
-https://github.com/lijunzh/ricker/blob/master/ricker/ricker.py
-
-https://github.com/calum-chamberlain/GPHS445_notebooks/blob/b11a7a6901ec2c80f283e051b42b7338151d902b/gphs445_utilities/location.py#L280
 
 https://github.com/calum-chamberlain/GPHS445_notebooks
 
